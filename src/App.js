@@ -15,7 +15,7 @@ function Preview(props) {
   const dirtyHtml = marked.parse(props.text);
 
   return (
-    <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(dirtyHtml)}}/>
+    <div id="preview" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(dirtyHtml)}}/>
   )
 }
 
