@@ -1,25 +1,14 @@
 import './App.css';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
-import React from 'react';
+import React, { useState } from 'react';
 import templateText from './template.js';
 
-class Editor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      editorText: templateText
-    }
-  }
 
-  render() {
-    return (
-      <div>
-        <div>{this.state.editorText}</div>
-        <Preview text={this.state.editorText}/>
-      </div>
-    )
-  }
+function Editor(props) {
+  return (
+      <textarea value={props.text} onChange={props.onChange}/>
+  )
 }
 
 function Preview(props) {
@@ -32,8 +21,13 @@ function Preview(props) {
 
 
 function App() {
+  const [text, setText] = useState(templateText)
+
   return (
-    <Editor />
+    <div>
+      <Editor text={text} onChange={event => setText(event.target.value)}/>
+      <Preview text={text}/>
+    </div>
   );
 }
 
