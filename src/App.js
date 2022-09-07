@@ -1,5 +1,6 @@
 import './App.css';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 import React from 'react';
 import templateText from './template.js';
 
@@ -15,16 +16,17 @@ class Editor extends React.Component {
     return (
       <div>
         <div>{this.state.editorText}</div>
-        <Rendered text={this.state.editorText}/>
+        <Preview text={this.state.editorText}/>
       </div>
     )
   }
 }
 
-function Rendered(props) {
-  const html = marked.parse(props.text);
+function Preview(props) {
+  const dirtyHtml = marked.parse(props.text);
+
   return (
-    <div dangerouslySetInnerHTML={{__html: html}}/>
+    <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(dirtyHtml)}}/>
   )
 }
 
