@@ -15,7 +15,9 @@
 }
 
 img {
-  max-height: 20vh;
+  max-height: 30vh;
+  display: block;
+  margin: auto;
 }
 
 textarea {
