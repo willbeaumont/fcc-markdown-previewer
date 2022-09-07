@@ -7,7 +7,7 @@ import templateText from './template.js';
 
 function Editor(props) {
   return (
-      <textarea value={props.text} onChange={props.onChange}/>
+      <textarea id="editor" value={props.text} onChange={props.onChange}/>
   )
 }
 
