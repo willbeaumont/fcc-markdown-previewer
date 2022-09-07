@@ -24,8 +24,8 @@ function App() {
 
   return (
     <div className="App-header">
-      <Editor text={text} onChange={event => setText(event.target.value)}/>
       <Preview text={text}/>
+      <Editor text={text} onChange={event => setText(event.target.value)}/>
     </div>
   );
 }
