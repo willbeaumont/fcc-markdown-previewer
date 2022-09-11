@@ -1,4 +1,4 @@
-const templateText = `# Markdown Previewer
+const templateText = `# Markdown Document
 
 Welcome to the markdown previewer! This previewer will show you how
 markdown renders.
