@@ -28,12 +28,18 @@
   pre, code {
     @apply bg-gray-50;
     @apply p-1;
-    @apply w-auto;
+    @apply w-fit;
   }
   blockquote p {
-      @apply px-4;
-      @apply border-l-4;
-      @apply border-gray-300;
+    @apply px-4;
+    @apply border-l-4;
+    @apply border-gray-300;
+  }
+  img {
+    @apply block;
+    @apply m-auto;
+    @apply max-w-xs;
+    @apply w-full;
   }
   a {
     @apply text-slate-600 underline;
