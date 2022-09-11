@@ -1,17 +1,40 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
+.App-content {
   background-color: #282c34;
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.App-header {
+  color: white;
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-around;
+}
+
+.App-header h1 {
+  margin: px;
+}
+
+.App-cards {
+
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: rows;
   align-items: center;
   justify-content: center;
-  font-size: calc(7px + 1vmin);
+  font-size: calc(7px + .5vmin);
   color: white;
+}
+
+.Card {
+  padding: 15px;
+  margin: 15px;
+  width: 50%;
+  height: 90%;
+  background-color: gray;
 }
 
 img {
@@ -20,15 +43,7 @@ img {
   margin: auto;
 }
 
-textarea {
-  width: 50vw;
-  height: 95vh;
-}
-
-#preview {
-  width: 50vw;
-}
-
-.App-link {
-  color: #61dafb;
+#editor {
+  height: 100%;
+  width: 100%;
 }
