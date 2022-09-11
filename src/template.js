@@ -1,7 +1,8 @@
-const templateText = `# Markdown Document
+const templateText = `*Hint: try typing in the text area under editor!*
 
-Welcome to the markdown previewer! This previewer will show you how
-markdown renders.
+# Markdown Document
+
+Welcome to the markdown previewer! This previewer will show you how markdown renders.
 
 ## Examples of what you can do in markdown
 
@@ -24,7 +25,7 @@ def hello_markdown():
 
 ![Fireworks](https://images.unsplash.com/photo-1533230408708-8f9f91d1235a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80)
 
-Blockquotes provide a nice way to reference other ideas.
+Block quotes provide a nice way to reference other ideas.
 >Positive thinking will let you do everything better than negative thinking will.
 >
 >-Zig Ziglar
